@@ -559,6 +559,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <li>Key account management та переговори</li>
         <li>Управління командою продажів</li>
         <li>Замовлення товару та forecast</li>
+        <li>Trade marketing: оцінка ефективності активностей</li>
       </ul>
       <div class="solar-section">Команда та підпорядкування</div>
       <div class="fn-roster" data-fn="Commercial Function"></div>
@@ -579,7 +580,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
       <div class="solar-title">Marketing Function</div>
       <div class="solar-purpose">Будує та розвиває портфель брендів. Маркетингова стратегія, кампанії, запуски продуктів та генерація попиту на підтримку комерційних результатів.</div>
       <div class="solar-section">Зона відповідальності</div>
-      <ul class="solar-list"><li>Маркетингова стратегія та розвиток брендів</li><li>Запуски нових продуктів та брендів</li><li>Управління маркетинговим бюджетом</li><li>Digital: SMM, контент, інфлюенсери</li><li>PR та партнерства з медіа, блогерами та лідерами думок</li><li>Trade marketing та промо-активності</li></ul>
+      <ul class="solar-list"><li>Маркетингова стратегія та розвиток брендів</li><li>Запуски нових продуктів та брендів</li><li>Управління маркетинговим бюджетом</li><li>Digital: SMM, контент, інфлюенсери</li><li>PR та партнерства з медіа, блогерами та лідерами думок</li></ul>
       <div class="solar-section">Команда та підпорядкування</div>
       <div class="fn-roster" data-fn="Marketing Function"></div>
     </div>
@@ -1483,14 +1484,14 @@ const ROLES = {
     ]
   },
   'trade-mkt': {
-    dept: 'Marketing',
+    dept: 'Commercial',
     title: 'Trade Marketing Manager',
     person: '· відкрита роль',
-    reports_to: 'Marketing Director',
+    reports_to: 'Commercial Director',
     subordinates: '—',
-    dept_unit: 'Відділ маркетингу',
-    appointment: 'Призначається та звільняється рішенням Marketing Director, погодженим з керівництвом компанії',
-    substitute: 'Інший співробітник маркетингової команди за рішенням Marketing Director',
+    dept_unit: 'Комерційний відділ',
+    appointment: 'Призначається та звільняється рішенням Commercial Director, погодженим з керівництвом компанії',
+    substitute: 'Інший співробітник комерційного відділу за рішенням Commercial Director',
     goal: 'Оцифрувати ефективність трейд-маркетингових активностей — перевести їх результат із якісної оцінки у вимірювані бізнес-показники, які показують, чи конвертувалась активність у продажі та прибуток.',
     ckp: [
       'Виміряна економічна ефективність трейд-маркетингових активностей (ROI, вплив на sell-out)',
@@ -1507,14 +1508,14 @@ const ROLES = {
       'Аналітика ефективності активностей': [
         'розробляє показники та методологію оцінки трейд-маркетингових активностей',
         'аналізує зв\'язок між маркетинговими активностями та динамікою продажів',
-        'готує регулярну звітність про ROI активностей для Marketing Director'
+        'готує регулярну звітність про ROI активностей для Commercial Director'
       ],
-      'Координація з Commercial': [
-        'узгоджує з Commercial Director критерії оцінки впливу активностей на продажі',
-        'бере участь у плануванні активностей з урахуванням очікуваної комерційної віддачі'
+      'Координація з Marketing': [
+        'узгоджує з Marketing Director критерії оцінки впливу трейд-маркетингових активностей на продажі',
+        'бере участь у плануванні активностей спільно з маркетинговою командою з урахуванням очікуваної комерційної віддачі'
       ]
     },
-    interaction_internal: 'Marketing Director – узгодження методології та результатів аналітики. Commercial Director та відділ продажів – узгодження критеріїв оцінки впливу на продажі, обмін даними по sell-out. Operations Marketer – отримання даних про реалізовані активності.',
+    interaction_internal: 'Commercial Director – узгодження методології оцінки та результатів аналітики. Marketing Director та маркетингова команда – узгодження критеріїв оцінки впливу активностей, обмін даними про реалізовані активності. Відділ продажів – дані по sell-out та результатах у точках продажу.',
     kpi: [
       'ROI трейд-маркетингових активностей',
       'Частка активностей із виміряним впливом на sell-out',
@@ -2698,6 +2699,9 @@ const ORG = [
       ]},
       { lbl:'Commercial Operations', rows:[
         {role:'Operations Manager',name:'Федорчук Евеліна',id:'ops-mgr',lvl:1},
+      ]},
+      { lbl:'Trade Marketing', rows:[
+        {role:'Trade Marketing Manager',name:'·  відкрита роль',id:'trade-mkt',lvl:1},
       ]}
     ]
   },
@@ -2720,7 +2724,6 @@ const ORG = [
       ]},
       { lbl:'Marketing Operations', rows:[
         {role:'Operations Marketer',name:'Колісник Тетяна',id:'ops-mkt',lvl:1},
-        {role:'Trade Marketing Manager',name:'·  відкрита роль',id:'trade-mkt',lvl:1},
       ]}
     ]
   },
