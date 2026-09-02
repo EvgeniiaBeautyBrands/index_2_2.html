@@ -229,12 +229,6 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 
 .solar-wrap{display:flex;gap:0;border:1px solid var(--bord-light);border-radius:4px;overflow:hidden;margin:0 auto 3rem;background:var(--white);min-height:580px;max-width:920px}
 .solar-svg-side{flex:0 0 55%;padding:2rem 1.5rem 1.5rem;background:var(--pink-light);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.fn-nav-side{flex:0 0 40%;padding:1.75rem 1.5rem;background:var(--pink-light);display:flex;flex-direction:column;gap:.7rem;justify-content:center}
-.fn-nav-btn{background:var(--white);border:1px solid var(--bord-mid);border-radius:6px;padding:.9rem 1.1rem;cursor:pointer;transition:transform .15s,box-shadow .15s}
-.fn-nav-btn:hover{transform:translateX(3px)}
-.fn-nav-btn.solar-fn-active{box-shadow:0 0 0 1.5px var(--bord);background:var(--bord-light)}
-.fn-nav-title{font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.2rem}
-.fn-nav-sub{font-size:.72rem;color:var(--gray);line-height:1.5}
 .solar-info-side{flex:1 1 0;padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center;min-height:580px;overflow-y:auto;border-left:1px solid var(--bord-light)}
 .solar-default{opacity:.4;font-size:.82rem;color:var(--gray);line-height:1.7;text-align:center}
 .solar-panel{display:none}
@@ -328,7 +322,6 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   .solar-wrap{flex-direction:column;min-height:auto;max-width:100%}
   .solar-svg-side{flex:none;width:100%;padding:1.25rem .75rem 1rem;min-height:320px}
   .solar-svg-side svg{max-height:300px!important}
-  .fn-nav-side{flex:none;width:100%;padding:1rem}
   .solar-info-side{flex:none;width:100%;padding:1.25rem 1.25rem;min-height:auto;border-left:none;border-top:1px solid var(--bord-light)}
 
   /* Fn grid accordion */
@@ -450,46 +443,108 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 <div class="view" id="v2">
 <div style="max-width:920px;margin:0 auto 2rem;padding:2.5rem 3rem;background:var(--pink-light);border:1px solid var(--bord-light);border-radius:4px">
   <div style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bord);margin-bottom:1.4rem;font-weight:500">Як влаштована компанія</div>
-  <div>
+  <div style="margin-bottom:1.4rem">
     <div style="font-family:'Montserrat',sans-serif;font-size:1.02rem;font-weight:500;color:var(--dark);margin-bottom:.4rem">Структура функцій</div>
-    <p style="font-size:.85rem;color:var(--gray);line-height:1.8;margin:0">Beauty Brands складається з п'яти бізнес-функцій: Комерція, Маркетинг, Фінанси, Операції та Supply Chain, HR. Кожна функція має свого керівника, свою команду та свою зону відповідальності.</p>
+    <p style="font-size:.85rem;color:var(--gray);line-height:1.8;margin:0">Beauty Brands керується двома співвласниками та складається з п'яти бізнес-функцій: Комерція, Маркетинг, Фінанси, Операції та Supply Chain, HR. Кожна функція має свого керівника, свою команду та свою зону відповідальності — керівники функцій підзвітні безпосередньо власникам.</p>
+  </div>
+  <div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:1.02rem;font-weight:500;color:var(--dark);margin-bottom:.4rem">Рішення на стику функцій — Executive Board</div>
+    <p style="font-size:.85rem;color:var(--gray);line-height:1.8;margin:0">З ростом компанії з'являються рішення, які виходять за межі однієї функції: великі витрати, ключові договори, наймання керівників, зміни структури. Для таких рішень існує Executive Board — формат, у якому власники та ключові керівники спільно ухвалюють рішення, забезпечуючи повну картину — фінансову, операційну та стратегічну.</p>
   </div>
 </div>
 
-<div style="max-width:920px;margin:0 auto 2rem;padding:1.6rem 3rem;border-top:2px solid var(--bord)">
-  <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:500;color:var(--dark);margin-bottom:.3rem">Функції компанії</div>
-  <div style="font-size:.76rem;color:var(--gray);line-height:1.6">Оберіть функцію, щоб побачити команду, зони відповідальності та картки посад</div>
+<div style="max-width:920px;margin:0 auto 2rem;padding:1.6rem 3rem;border-top:2px solid var(--bord);display:flex;align-items:center;justify-content:space-between;gap:2rem">
+  <div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:500;color:var(--dark);margin-bottom:.3rem">Архітектура компанії</div>
+    <div style="font-size:.76rem;color:var(--gray);line-height:1.6">5 функцій · керівники · зони відповідальності · KPI</div>
+  </div>
+  <div style="font-size:1.2rem;color:var(--bord);opacity:.6;flex-shrink:0">↓</div>
 </div>
 
-<!-- FUNCTION NAV -->
+<!-- SOLAR INTERACTIVE -->
 <div class="solar-wrap">
-  <div class="fn-nav-side">
-    <div class="fn-nav-btn" id="sfn-commercial" onclick="solarSelect('commercial')">
-      <div class="fn-nav-title">Commercial</div>
-      <div class="fn-nav-sub">Продажі, ключові клієнти, комерційна стратегія, trade marketing</div>
-    </div>
-    <div class="fn-nav-btn" id="sfn-marketing" onclick="solarSelect('marketing')">
-      <div class="fn-nav-title">Marketing</div>
-      <div class="fn-nav-sub">Бренди, digital, PR</div>
-    </div>
-    <div class="fn-nav-btn" id="sfn-finance" onclick="solarSelect('finance')">
-      <div class="fn-nav-title">Finance</div>
-      <div class="fn-nav-sub">Фінанси, облік, документообіг</div>
-    </div>
-    <div class="fn-nav-btn" id="sfn-operations" onclick="solarSelect('operations')">
-      <div class="fn-nav-title">Operations &amp; Supply Chain</div>
-      <div class="fn-nav-sub">Склад, логістика, поставки</div>
-    </div>
-    <div class="fn-nav-btn" id="sfn-hr" onclick="solarSelect('hr')">
-      <div class="fn-nav-title">HR</div>
-      <div class="fn-nav-sub">Люди, культура, організаційна модель</div>
+  <div class="solar-svg-side">
+    <div class="board-radial">
+      <div class="board-radial-ring"></div>
+
+      <div class="board-radial-line" style="left:46%;top:44.444%;width:24.94%;transform:rotate(-41.13deg)"></div>
+      <div class="board-radial-line" style="left:58%;top:49.074%;width:20.85%;transform:rotate(28.06deg)"></div>
+      <div class="board-radial-line" style="left:46%;top:56.481%;width:20%;transform:rotate(90deg)"></div>
+      <div class="board-radial-line" style="left:34%;top:49.074%;width:20.85%;transform:rotate(151.94deg)"></div>
+      <div class="board-radial-line" style="left:46%;top:44.444%;width:24.94%;transform:rotate(-138.87deg)"></div>
+
+      <div class="board-radial-connector"></div>
+
+      <div class="board-radial-node board-radial-board" id="sfn-board" onclick="solarSelect('board')">
+        <div class="brn-title">Executive Board</div>
+        <div class="brn-sub">формат ухвалення стратегічних рішень · натисніть ↗</div>
+      </div>
+
+      <div class="board-radial-node board-radial-center" onclick="solarSelect('eb')">
+        <div class="brn-title">Co-Founders<br>Beauty Brands</div>
+        <div class="brn-sub">натисніть ↗</div>
+      </div>
+
+      <div class="board-radial-node board-radial-fn fn-commercial" id="sfn-commercial" onclick="solarSelect('commercial')">Commercial</div>
+      <div class="board-radial-node board-radial-fn fn-operations" id="sfn-operations" onclick="solarSelect('operations')">Operations<br>&amp; SC</div>
+      <div class="board-radial-node board-radial-fn fn-hr" id="sfn-hr" onclick="solarSelect('hr')">HR</div>
+      <div class="board-radial-node board-radial-fn fn-marketing" id="sfn-marketing" onclick="solarSelect('marketing')">Marketing</div>
+      <div class="board-radial-node board-radial-fn fn-finance" id="sfn-finance" onclick="solarSelect('finance')">Finance</div>
+
+      <div class="board-radial-hint">натисніть на будь-який блок</div>
     </div>
   </div>
 
   <div class="solar-info-side">
     <div class="solar-default" id="solar-default">
       <div style="font-size:2rem;opacity:.15;margin-bottom:.5rem">◎</div>
-      Оберіть функцію, щоб побачити деталі
+      Оберіть <strong>Executive Board</strong> або будь-яку функцію, щоб побачити деталі
+    </div>
+
+    <!-- EB -->
+    <div class="solar-panel" id="spanel-eb">
+      <div class="solar-badge eb-badge">Co-Founders</div>
+      <div class="solar-title">Меркулова Світлана · Понирко Дмитро</div>
+      <div class="solar-purpose">Співвласники та засновники компанії — визначають стратегічний напрямок, затверджують ключові рішення та формують бачення Beauty Brands.</div>
+      <div class="lt-members" style="grid-template-columns:1fr 1fr;max-width:480px">
+        <div class="lt-card">
+          <div class="lt-card-role">Co-Founder · CEO</div>
+          <div class="lt-card-name">Меркулова Світлана</div>
+          <div class="lt-card-desc">Стратегія, ключові комерційні та маркетингові рішення, погодження форкастів і квартальних планів</div>
+        </div>
+        <div class="lt-card">
+          <div class="lt-card-role">Co-Founder · Owner</div>
+          <div class="lt-card-name">Понирко Дмитро</div>
+          <div class="lt-card-desc">Стратегія, інвестиційні рішення, зовнішні відносини, точкова координація операційних питань</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Executive Board -->
+    <div class="solar-panel" id="spanel-board">
+      <div class="solar-badge eb-badge">Executive Board</div>
+      <div class="solar-title">Формат ухвалення стратегічних рішень</div>
+      <div class="solar-purpose">З ростом компанії частина рішень виходить за межі однієї функції і потребує спільного погляду. Executive Board забезпечує, щоб такі рішення ухвалювалися з повною картиною — фінансовою, операційною та стратегічною.</div>
+      <div class="solar-section">Склад</div>
+      <ul class="solar-list">
+        <li>Меркулова Світлана · Co-Founder, CEO</li>
+        <li>Понирко Дмитро · Co-Founder</li>
+        <li>Черкашина Марина · Financial Director</li>
+        <li>Понирко Сергій · Head of Operations & Supply Chain</li>
+      </ul>
+      <div class="solar-section">Зона відповідальності та рішень</div>
+      <ul class="solar-list">
+        <li>Погодження значних бюджетів і фінансових зобов'язань</li>
+        <li>Рішення щодо найму та ротацій керівного складу</li>
+        <li>Трансформація структури та перерозподіл зон впливу</li>
+        <li>Забезпечення регуляторної відповідності та прозорості бізнесу</li>
+      </ul>
+      <div class="solar-section">Регламент</div>
+      <ul class="solar-list">
+        <li>Формат: зустрічі за запитом для швидкого розв'язання конкретних питань</li>
+        <li>Межі автономії: самостійні рішення в межах повноважень, що склалися в поточній практиці роботи компанії</li>
+        <li>Погодження: вихід за межі повноважень потребує затвердження власниками</li>
+      </ul>
     </div>
 
     <!-- Commercial -->
@@ -525,7 +580,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
       <div class="solar-title">Marketing Function</div>
       <div class="solar-purpose">Будує та розвиває портфель брендів. Маркетингова стратегія, кампанії, запуски продуктів та генерація попиту на підтримку комерційних результатів.</div>
       <div class="solar-section">Зона відповідальності</div>
-      <ul class="solar-list"><li>Маркетингова стратегія та розвиток брендів</li><li>Запуски нових продуктів та брендів</li><li>Управління маркетинговим бюджетом</li><li>Digital: SMM, контент, інфлюенсери</li><li>PR та партнерства з медіа, блогерами та лідерами думок</li></ul>
+      <ul class="solar-list"><li>Маркетингова стратегія та розвиток брендів</li><li>Запуски нових продуктів та брендів</li><li>Управління маркетинговим бюджетом</li><li>Digital: SMM, контент соціальних мереж</li><li>PR та партнерства з медіа, блогерами та лідерами думок</li></ul>
       <div class="solar-section">Команда та підпорядкування</div>
       <div class="fn-roster" data-fn="Marketing Function"></div>
     </div>
@@ -1538,7 +1593,7 @@ const ROLES = {
       'за побудову та розвиток довгострокових відносин з блогерами, креаторами, журналістами та лідерами думок',
       'за підготовку PR-текстів, прес-релізів та матеріалів до бренд-проявів',
       'за координацію PR-розсилок, прес-паків та спецпроєктів',
-      'за присутність брендів у соціальних мережах у ролі голосу бренду — комунікацію з ком\'юніті та підтримку репутації',
+      'за моніторинг репутації брендів у соціальних мережах та реагування на репутаційно чутливі звернення (ескальовані від SMM Manager або виявлені самостійно)',
       'за оперативне реагування на кризові ситуації та участь у формуванні антикризових комунікацій',
       'за звітність по PR-активностях та аналіз їх ефективності'
     ],
@@ -1553,9 +1608,9 @@ const ROLES = {
         'бере участь у створенні PR-концепцій, спецпроєктів та прес-паків',
         'координує підготовку, брифування та відправку PR-розсилок'
       ],
-      'Робота з ком\'юніті та репутацією': [
-        'взаємодіє з ком\'юніті брендів у соціальних мережах, працює з коментарями',
-        'підтримує репутацію брендів та компанії в медіапросторі',
+      'Репутаційний моніторинг': [
+        'відстежує настрої аудиторії та згадки брендів у медіапросторі',
+        'реагує на репутаційно чутливі звернення, ескальовані SMM Manager або виявлені самостійно',
         'швидко реагує на кризові ситуації та бере участь у формуванні антикризових комунікацій'
       ],
       'Аналітика PR-активностей': [
@@ -1564,7 +1619,7 @@ const ROLES = {
         'пропонує нові ідеї та формати на основі результатів'
       ]
     },
-    interaction_internal: 'Marketing Director – узгодження PR-стратегії та ключових активностей. Brand Leader / Brand Manager – узгодження PR-підтримки брендів. SMM Manager – координація контенту та комунікацій у соціальних мережах. Commercial Director та відділ продажів – узгодження PR-активностей, що підтримують продажі.',
+    interaction_internal: 'Marketing Director – узгодження PR-стратегії та ключових активностей. Brand Leader / Brand Manager – узгодження PR-підтримки брендів. SMM Manager – передає партнерські матеріали для публікації, отримує ескальовані репутаційно чутливі звернення. Commercial Director та відділ продажів – узгодження PR-активностей, що підтримують продажі.',
     interaction_external: 'Блогери, креатори та лідери думок – партнерства, колаборації, PR-проєкти. Журналісти та медіа – прес-релізи, публікації, PR-присутність. Партнери та бізнеси – колаборації та спільні PR-активності.',
     kpi: [
       'Кількість нових партнерств і колаборацій для пріоритетних брендів',
@@ -2580,7 +2635,8 @@ const ROLES = {
     functional: {
       'Підбір та адаптація': [
         'Веде повний цикл підбору персоналу в межах узгодженого процесу',
-        'Організовує та супроводжує онбординг нових співробітників'
+        'Організовує та супроводжує онбординг нових співробітників',
+        'Готує кадрові рішення до розгляду на рівні Executive Board'
       ],
       'Організаційний розвиток': [
         'Розробляє та підтримує організаційну модель і структуру компанії',
@@ -2605,7 +2661,7 @@ const ROLES = {
         'Проводить опитування залученості (eNPS) та аналізує результати'
       ]
     },
-    interaction_internal: 'Власники — стратегічні HR-пріоритети та організаційні рішення. Усі керівники підрозділів — підтримка в управлінні персоналом. Усі співробітники — підтримка, розвиток, корпоративна культура.',
+    interaction_internal: 'Власники — стратегічні HR-пріоритети та організаційні рішення. Executive Board — участь у підготовці кадрових рішень та рішень щодо структури. Усі керівники підрозділів — підтримка в управлінні персоналом. Усі співробітники — підтримка, розвиток, корпоративна культура.',
     interaction_external: 'Кандидати. Провайдери навчання та розвитку. Рекрутингові платформи та агентства.',
     kpi: [
       'Актуальність організаційної моделі та карт посад',
@@ -2701,7 +2757,7 @@ const ORG = [
   },
   { fn:'HR Function', head_role:'HR People Partner', head_name:'Сакеріна Євгенія', head_id:'hrpp',
     interactions:[
-      '↔ CEO / власники: формування management team та системи KPI',
+      '↔ CEO / Executive Board: формування management team та системи KPI',
       '↔ Усі підрозділи: підтримка керівників в управлінні людьми'
     ],
     groups:[
