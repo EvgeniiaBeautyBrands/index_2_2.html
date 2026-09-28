@@ -227,9 +227,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .m-int{font-size:.77rem;line-height:1.7;color:var(--gray);margin-bottom:.4rem}
 
 
-.solar-wrap{display:flex;gap:0;border:1px solid var(--bord-light);border-radius:4px;overflow:hidden;margin:0 auto 3rem;background:var(--white);min-height:580px;max-width:920px}
-.solar-svg-side{flex:0 0 55%;padding:2rem 1.5rem 1.5rem;background:var(--pink-light);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.solar-info-side{flex:1 1 0;padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center;min-height:580px;overflow-y:auto;border-left:1px solid var(--bord-light)}
+.solar-wrap{display:flex;flex-direction:column;gap:0;border:1px solid var(--bord-light);border-radius:4px;overflow:hidden;margin:0 auto 3rem;background:var(--white);max-width:760px}
+.solar-svg-side{padding:2.5rem 1.5rem 2rem;background:var(--pink-light);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.solar-info-side{padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center;border-top:1px solid var(--bord-light)}
 .solar-default{opacity:.4;font-size:.82rem;color:var(--gray);line-height:1.7;text-align:center}
 .solar-panel{display:none}
 .solar-panel.active{display:block}
@@ -252,7 +252,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .lt-card-desc{font-size:.75rem;color:var(--gray);line-height:1.6}
 .solar-fn-active rect{stroke:var(--bord)!important;stroke-width:2!important}
 
-.board-radial{position:relative;width:100%;max-width:480px;aspect-ratio:500/540;margin:0 auto;font-family:'Montserrat',sans-serif}
+.board-radial{position:relative;width:100%;max-width:600px;aspect-ratio:500/540;margin:0 auto;font-family:'Montserrat',sans-serif}
 .board-radial-ring{position:absolute;left:14%;top:19.44%;width:64%;height:59.26%;border:1.5px solid var(--bord-mid);border-radius:50%;opacity:.5;box-sizing:border-box}
 .board-radial-connector{position:absolute;left:46%;top:11.85%;height:7.41%;width:1px;transform:translateX(-50%);background:repeating-linear-gradient(to bottom,var(--bord) 0 4px,transparent 4px 7px);opacity:.6}
 .board-radial-line{position:absolute;height:1px;background:var(--bord-mid);opacity:.5;transform-origin:0 50%}
